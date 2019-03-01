@@ -56,6 +56,7 @@ const router =new Router({
     },
     {
       path: '*',
+      name: 'error',
       component:Error
     }
 

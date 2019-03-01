@@ -2,6 +2,7 @@ import Vuex from 'vuex';
 import Vue from 'vue'
 import home from './home/index'
 import registor from './registor/index'
+import classify from './classify'
 Vue.use(Vuex)
 let state={}
 let actions={}
@@ -14,7 +15,8 @@ const store = new Vuex.Store({
   getters,
   modules:{
     home,
-    registor
+    registor,
+    classify,
   }
 })
 export default store
