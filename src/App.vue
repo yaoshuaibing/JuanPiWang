@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+
     <router-view/>
+    <foot-com></foot-com>
   </div>
 </template>
 
 <script>
+import  FootCom from'../src/components/commom/footer'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    FootCom,
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+.app{
+  height:80%
 }
 </style>
