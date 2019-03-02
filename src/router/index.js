@@ -11,7 +11,6 @@ import Classify from '../components/classify/classify.vue'
 import Search from '../components/classify/Search.vue'
 import ClassifyCate from '../components/classify/ClassifyCate.vue'
 import ClassifyCateDetails from '../components/classify/ClassifyCateDetails.vue'
-// footer页面暂时先在app文件中引入
 
 
 Vue.use(Router)
