@@ -8,7 +8,8 @@
                 <main-com/>
             </div>
         </div>
-         <ToTop/>  
+         <ToTop/>
+         <Footer/>
     </div>
 </template>
 <script>
@@ -19,13 +20,16 @@ import DiscountCom from './components/discount'
 import BScroll from 'better-scroll'
 import MainCom from './components/main'
 import ToTop from '../commom/ToTop'
+import Footer from '../commom/Footer'
+
 export default {
     components: {
         HeaderCom,
         MiddleNav,
         DiscountCom,
         MainCom,
-        ToTop
+        ToTop,
+        Footer,
     },
     created(){
         this.handleHomeData();
@@ -54,9 +58,9 @@ export default {
              tap:true
          });
         this.scroll.on("pullingUp",()=>{
-            alert(1)
+            //alert(1)
         })
-         console.log(this.scroll)
+         //console.log(this.scroll)
      }); 
         
    }

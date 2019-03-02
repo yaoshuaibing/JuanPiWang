@@ -8,9 +8,10 @@ import './common/css/reset.css'
 import './common/js/flexble'
 import './assets/iconfont/iconfont.css'
 import store from './store'
-import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
-Vue.use(MintUI)
+// 全局引入mint-ui，但考虑性能优化，进行局部引入
+// import MintUI from 'mint-ui'
+// import 'mint-ui/lib/style.css'
+// Vue.use(MintUI)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

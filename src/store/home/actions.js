@@ -32,6 +32,6 @@ export default{
     }
   })
   commit("handleHomedataGoods",data.data.goods)
-  console.log(data.data.goods)
+    //console.log(data.data.goods)
   }
 }

@@ -4,7 +4,7 @@
       <img :src="topbanner.pic_url" alt="">
     </div>
     <div class="searchInput">
-      <router-link to="/keyword">
+      <router-link to="/search">
           <span class="iconfont">&#xe623;</span>
           <span class="logofont">卷皮</span>
           <span class="search">搜索</span>

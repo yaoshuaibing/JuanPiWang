@@ -2,11 +2,18 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HomeCom from '@/components/home/home'
 import CartCom from '@/components/cart/cart'
-import ClassifyCom from '../components/classify/classify.vue'
 import MyCom from '@/components/my/my'
 import Error from '@/components/error/error'
 import Register from '../components/registor/registor.vue'
-import KeywordCom from '../components/keywords/keywords.vue'
+
+// classify页面及其子页面
+import Classify from '../components/classify/classify.vue'
+import Search from '../components/classify/Search.vue'
+import ClassifyCate from '../components/classify/ClassifyCate.vue'
+import ClassifyCateDetails from '../components/classify/ClassifyCateDetails.vue'
+// footer页面暂时先在app文件中引入
+
+
 Vue.use(Router)
 const router =new Router({
   routes: [
@@ -30,7 +37,22 @@ const router =new Router({
     {
       path: '/classify',
       name: 'classify',
-      component: ClassifyCom
+      component: Classify
+    },
+    {
+      path: '/search',
+      name: 'search',
+      component: Search
+    },
+    {
+      path: '/cate',
+      name: 'cate',
+      component: ClassifyCate
+    },
+    {
+      path: '/cateDetails',
+      name: 'cateDetails',
+      component: ClassifyCateDetails
     },
     {
       path: '/my',
@@ -46,12 +68,6 @@ const router =new Router({
       path: '/register',
       name: '/register',
       component: Register
-
-    },
-    {
-      path: '/keyword',
-      name: '/keyword',
-      component: KeywordCom
 
     },
     {

@@ -1,71 +1,68 @@
 <template>
     <div id="footer">
         <ul>
-            <router-link :to="{name:item.name}" v-for="(item,index) in footnavs" :key="index" tag="li">
-                <i class="iconfont" v-html="item.icon"></i>
-                <span>{{item.title}}</span>
-            </router-link>
+            <li v-for="(item,index) in iconTab" :key="index">
+                <router-link :to="{name:item.name}">
+                    <i class="iconfont" v-html="item.icon"></i>
+                    <span>{{item.title}}</span>
+                </router-link> 
+            </li>
+            <!-- <router-link  v-for="(item,index) in iconTab" :key="index" :to="{name:item.name}" tag="li"></router-link>  -->
         </ul>
     </div>
 </template>
+
 <script>
 export default {
     data(){
-        return{
-            footnavs:[
-                {
-                    name:'home',
-                    title:"首页",
-                    icon:"&#xe808;"
-                },
-                {
-                    name:'classify',
-                    title:"分类",
-                    icon:"&#xe7f9;"
-                },
-                {
-                    name:'cart',
-                    title:"购物车",
-                    icon:"&#xe607;"
-                },
-                {
-                    name:'my',
-                    title:"我的",
-                    icon:"&#xe609;"
-                },
+        return {
+            activeIndex:0,
+            iconTab:[
+                {icon:"&#xe684;",title:"首页",name:"home"},
+                {icon:"&#xe61f;",title:"分类",name:"classify"},
+                {icon:"&#x344b;",title:"购物车",name:"cart"}, 
+                {icon:"&#xe620;",title:"我的",name:"my"},
             ]
+        }
+    },
+}
+</script>
+
+<style scoped lang="stylus"> 
+#footer{
+    width:100%;
+    height:.99rem;
+    background: #fff;
+    position:fixed;
+    bottom:0; 
+    ul{
+        width:100%;
+        height:100%;
+        display: flex;
+        justify-content: space-between;
+        li{
+            width:100%;
+            height:100%;
+            a{
+                width:100%;
+                height:100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                i{
+                    display: block;
+                    font-size:.48rem;
+                }
+                span{
+                    display: block;
+                    font-size:.24rem;
+                }
+            }
+            .router-link-active{
+                color:#ff464e;
+            }
         }
     }
 }
-</script>
-<style scoped lang="stylus">
-    #footer
-        width:100%
-        position:fixed
-        bottom:0
-        left:0
-        height:.96rem  
-        background:#fff             
-        ul
-            display: flex
-            width:100%
-            height:100%
-            justify-content: space-around   
-            li
-                display:flex
-                flex-direction: column
-                justify-content:space-around
-                text-align:center
-                flex:1   
-                i
-                    font-size: .46rem   
-                span
-                    font-size: .33rem
-    
-   .router-link-active
-        color:red
-    
-
 </style>
-
-

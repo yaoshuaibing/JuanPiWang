@@ -1,7 +1,101 @@
+import {ClassifyData} from "../../apis/classify";
+
 export default {
-    state:{},
-    actions:{},
-    mutations:{},
-    getters:{},
-    namespaced: true
+    state:{
+        cateData:'',
+        tab:[
+            {tid:1278,name:'女装',
+            pic:[
+                {
+                    title:'连衣裙',picSrc:'/bao/190219/3/c/5c6b7fd833b089288313b68d_200x200.jpg'
+                },
+                {
+                    title:'衬衣',picSrc:'/bao/190220/e/e/5c6cd4fd33b08918303159b2_200x200.jpg'
+                },
+                {
+                    title:'牛仔裤',picSrc:'/bao/180517/b/0/5afd2b2133b08909906c57af_200x200.png'
+                },
+                {
+                    title:'外套',picSrc:'/bao/181106/4/a/5be163f1b6f8ea61f7712835_200x200.png'
+                },
+                {
+                    title:'毛衫',picSrc:'/bao/190219/a/0/5c6b853533b0891eb97937d7_200x200.jpg'
+                },
+                {
+                    title:'连衣裙',picSrc:'/bao/190219/3/c/5c6b7fd833b089288313b68d_200x200.jpg'
+                },
+                {
+                    title:'衬衣',picSrc:'/bao/190220/e/e/5c6cd4fd33b08918303159b2_200x200.jpg'
+                },
+                {
+                    title:'牛仔裤',picSrc:'/bao/180517/b/0/5afd2b2133b08909906c57af_200x200.png'
+                },
+                {
+                    title:'外套',picSrc:'/bao/181106/4/a/5be163f1b6f8ea61f7712835_200x200.png'
+                },
+                {
+                    title:'毛衫',picSrc:'/bao/190219/a/0/5c6b853533b0891eb97937d7_200x200.jpg'
+                },
+            ]},
+            {tid:2243,name:'男装',pic:[
+                {
+                title:'连衣裙',picSrc:'/bao/180517/b/0/5afd2b2133b08909906c57af_200x200.png'
+                },
+                {
+                    title:'外套',picSrc:'/bao/181106/4/a/5be163f1b6f8ea61f7712835_200x200.png'
+                },
+                {
+                    title:'毛衫',picSrc:'/bao/190219/a/0/5c6b853533b0891eb97937d7_200x200.jpg'
+                }
+            ]},
+            {tid:1278,name:'母婴',pic:[{
+                title:'连衣裙',picSrc:'/bao/190220/e/e/5c6cd4fd33b08918303159b2_200x200.jpg'
+            }]},
+            {tid:1278,name:'鞋子',pic:[{
+                title:'连衣裙',picSrc:'/bao/180517/b/0/5afd2b2133b08909906c57af_200x200.png'
+            }]},
+            {tid:1278,name:'箱包',pic:[{
+                title:'连衣裙',picSrc:'/bao/190219/3/c/5c6b7fd833b089288313b68d_200x200.jpg'
+            }]},
+            {tid:1278,name:'居家百货',pic:[{
+                title:'连衣裙',picSrc:'/bao/181106/4/a/5be163f1b6f8ea61f7712835_200x200.png'
+            }]},
+            {tid:1278,name:'家电数码',pic:[{
+                title:'连衣裙',picSrc:'/bao/190219/3/c/5c6b7fd833b089288313b68d_200x200.jpg'
+            }]},
+            {tid:1278,name:'内衣配饰',pic:[{
+                title:'连衣裙',picSrc:'/bao/181106/4/a/5be163f1b6f8ea61f7712835_200x200.png'
+            }]},
+            {tid:1278,name:'美妆',pic:[{
+                title:'连衣裙',picSrc:'/bao/190219/3/c/5c6b7fd833b089288313b68d_200x200.jpg'
+            }]},
+            {tid:1278,name:'运动户外',pic:[{
+                title:'连衣裙',picSrc:'/bao/181106/4/a/5be163f1b6f8ea61f7712835_200x200.png'
+            }]},
+            {tid:1278,name:'美食',pic:[{
+                title:'连衣裙',picSrc:'/bao/190219/3/c/5c6b7fd833b089288313b68d_200x200.jpg'
+            }]},
+            {tid:1278,name:'车品文娱',pic:[{
+                title:'连衣裙',picSrc:'/bao/181106/4/a/5be163f1b6f8ea61f7712835_200x200.png'
+            }]},
+            {tid:1278,name:'通讯旅游',pic:[{
+                title:'连衣裙',picSrc:'/bao/190219/3/c/5c6b7fd833b089288313b68d_200x200.jpg'
+            }]},
+        ],
+       
+    },
+    actions:{
+        async handleClassifyData({commit,state}){
+            let data = await ClassifyData();
+            commit('handleClassifyData',data)  
+        }
+    },
+    mutations:{
+        handleClassifyData(state,data){
+            state.cateData = data;
+            console.log(state.cateData)
+            //根据接口异步加载出来的数据不是分类页面需要的数据，因此暂时用假数据
+        },
+    },
+    namespaced:true,
 }

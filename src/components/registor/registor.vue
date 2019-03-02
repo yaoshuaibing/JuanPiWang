@@ -48,7 +48,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 body,html
   height:100%
   background :#eee
