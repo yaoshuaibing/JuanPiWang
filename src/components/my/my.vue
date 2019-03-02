@@ -1,6 +1,6 @@
 <template>
     <div>
-        my
+        my-list
         <Footer/>
     </div>
 </template>
