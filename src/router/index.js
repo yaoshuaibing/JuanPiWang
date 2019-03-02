@@ -57,12 +57,12 @@ const router =new Router({
       path: '/my',
       name: 'my',
       component: MyCom
-    }, 
+    },
     // {
     //   path: '/detail/:id',
     //   name: 'detail',
     //   component: Detail
-    // }, 
+    // },
     {
       path: '/register',
       name: '/register',
@@ -80,6 +80,7 @@ const router =new Router({
 export default router
 router.beforeEach((to, from, next) => {
   if (to.meta.authRequired !== true) {
+    console.log(to);
     return next()
   }
   if (to.path === '/register') {
