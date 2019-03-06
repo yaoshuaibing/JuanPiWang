@@ -5,7 +5,7 @@
                 <router-link :to="{name:item.name}">
                     <i class="iconfont" v-html="item.icon"></i>
                     <span>{{item.title}}</span>
-                </router-link> 
+                </router-link>
             </li>
             <!-- <router-link  v-for="(item,index) in iconTab" :key="index" :to="{name:item.name}" tag="li"></router-link>  -->
         </ul>
@@ -20,7 +20,7 @@ export default {
             iconTab:[
                 {icon:"&#xe684;",title:"首页",name:"home"},
                 {icon:"&#xe61f;",title:"分类",name:"classify"},
-                {icon:"&#x344b;",title:"购物车",name:"cart"}, 
+                {icon:"&#x344b;",title:"购物车",name:"cart"},
                 {icon:"&#xe620;",title:"我的",name:"my"},
             ]
         }
@@ -28,13 +28,13 @@ export default {
 }
 </script>
 
-<style scoped lang="stylus"> 
+<style scoped lang="stylus">
 #footer{
     width:100%;
     height:.99rem;
     background: #fff;
     position:fixed;
-    bottom:0; 
+    bottom:0;
     ul{
         width:100%;
         height:100%;

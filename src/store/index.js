@@ -17,6 +17,7 @@ const store = new Vuex.Store({
     home,
     registor,
     classify,
+
   }
 })
 export default store

@@ -82,12 +82,12 @@ export default {
                 title:'连衣裙',picSrc:'/bao/190219/3/c/5c6b7fd833b089288313b68d_200x200.jpg'
             }]},
         ],
-       
+
     },
     actions:{
         async handleClassifyData({commit,state}){
             let data = await ClassifyData();
-            commit('handleClassifyData',data)  
+            commit('handleClassifyData',data)
         }
     },
     mutations:{

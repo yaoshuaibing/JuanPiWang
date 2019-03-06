@@ -7,6 +7,9 @@ import './common/css/border.css'
 import './common/css/reset.css'
 import './common/js/flexble'
 import './assets/iconfont/iconfont.css'
+/*Yz引入的iconfont，用于My页面*/
+import './assets/icon/iconfont.css'
+
 import store from './store'
 // 全局引入mint-ui，但考虑性能优化，进行局部引入
 // import MintUI from 'mint-ui'

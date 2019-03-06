@@ -80,7 +80,7 @@ const router =new Router({
 export default router
 router.beforeEach((to, from, next) => {
   if (to.meta.authRequired !== true) {
-    console.log(to);
+
     return next()
   }
   if (to.path === '/register') {
