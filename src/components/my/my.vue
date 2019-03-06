@@ -341,8 +341,8 @@ export default {
   /*客服端&&PC端*/
   .client{
     width:100%;
-    height:1rem;
     background:#fff;
+    padding-bottom:2rem;
 
   }
   .client div{
@@ -352,6 +352,7 @@ export default {
 
   }
   .client div a{
+    height:1rem;
     line-height: 1rem;
     font-size:0.35rem;
     color:#666;

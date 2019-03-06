@@ -1,6 +1,6 @@
 <template>
     <div class="toTop" @click="toTop" v-show="toTopIsShow" >
-        <div class="toTop-txt">回到顶部</div>
+        回到顶部
     </div>
 </template>
 
@@ -44,20 +44,11 @@
     bottom:100px;
     cursor: pointer;
     overflow: hidden;
-    background: #000
-}
-.toTop-txt{
-    color:#fff;
-    font-size: .3rem;
-    position: relative;
-    top:70px;
-    transition:all .2s linear;
-    width:100%;
-    height:100%
-
-}
-.toTop:hover .toTop-txt{
-    top:52px;
+    background: #fff;
+    border: 1px solid #cdcdcd;
+    font-size:.22rem;
+    text-align:center;
+    line-height:1rem;
 }
 
 </style>

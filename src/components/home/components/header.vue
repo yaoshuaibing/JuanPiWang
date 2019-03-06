@@ -5,11 +5,11 @@
     </div>
     <div class="searchInput">
       <router-link to="/search">
-          <span class="iconfont">&#xe623;</span>
+          <span class="iconfont">&#xe651;</span>
           <span class="logofont">卷皮</span>
           <span class="search">搜索</span>
       </router-link>
-      <span class="iconfont sear">&#xe61b;</span>
+      <span class="iconfont sear">&#xe601;</span>
     </div>
     <Swipe :auto="2000" class="wrapper">
       <SwipeItem class="wrapperItem" v-for="(item,index) in slide" :key="index">
@@ -66,7 +66,8 @@ export default {
         font-size :.4rem
         margin:0 .2rem 
       .logofont
-        font-size :.3rem      
+        font-size :.3rem 
+        color:#ff464e;     
     .sear
       font-size :.5rem
       padding:.2rem
